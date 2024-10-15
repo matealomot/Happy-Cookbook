@@ -1,0 +1,116 @@
+@import url(header.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(247, 242, 237);
+}
+
+main {
+  height: calc(100vh - 8rem);
+  width: 100%;
+}
+
+.block {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  top: 70%;
+  width: 100%;
+  max-width: 90vw;
+  margin-inline: auto;
+  padding-inline: 20px;
+  transform: translateY(-50%);
+}
+
+.video-wrapper {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-wrapper {
+  text-align: left;
+}
+
+.text-wrapper p {
+  color: white;
+  text-shadow: 0 0 5px black;
+  margin: 0;
+}
+
+.text-one,
+.text-two {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 5vw;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+.text-one {
+  animation-name: slide-in-left;
+}
+
+.text-two {
+  font-size: 3vw;
+  animation-name: slide-in-bottom;
+}
+
+span {
+  font-style: italic;
+  text-decoration: underline;
+  color: rgb(185, 54, 39);
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header, nav {
+    background-color: green;
+    height: 10rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 1rem 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .logo {
+    width: 15rem;
+  }
+}

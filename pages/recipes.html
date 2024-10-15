@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../style/recipes.css">
+	<link rel="icon" type="image/x-icon" href="../assets/logos/restaurant.png">
+	<title>My Cookbook - Recipes</title>
+</head>
+<body>
+	<div id="header_placeholder">
+	
+	</div>
+
+	<main>
+		<div class="filter_view_buttons">
+			<div class="adding">
+				<button id="add_recipe" class="recipe_management_buttons">Add Recipe</button>
+				<button id="cancel_adding" class="recipe_management_buttons hidden">Cancel</button>
+			</div>
+			<button id="view_recipes" class="recipe_management_buttons">View Recipes</button>
+		</div>
+
+		<div class="form_for_adding_recipes">
+			<div class="progress_bar">
+
+			</div>
+			<div id="step-1" class="form_step">
+				<h2>Step 1 - Add the name</h2>
+				<input class="add_recipe_inputs" type="text" id="recipeName" placeholder="Name of recipe...">
+				<button class="next_button">Next</button>
+			</div>
+			<div id="step-2" class="form_step">
+				<h2>Step 2 - Add ingredients</h2>
+				<input class="add_recipe_inputs" type="text" id="recipeIngredient" placeholder="ingredient name and measurement">
+				<div class="flavor_consistency">
+					<div class="flavor_choice">
+						<label for="sweet">Sweet</label>
+						<input type="radio" name="flavor" id="sweet" value="sweet" checked>
+						<label for="savory">Savory</label>
+						<input type="radio" name="flavor" id="savory" value="savory">
+					</div>
+					<div class="consistency_choice">
+						<label for="drink">Drink</label>
+						<input type="radio" name="consistency" id="drink" value="drink" checked>
+						<label for="food">Food</label>
+						<input type="radio" name="consistency" id="food" value="food">
+					</div>
+				</div>
+				<ol id="list_of_ingredients">
+				</ol>
+				<button id="add_ingredient">Add ingredient</button>
+				<button class="next_button">Next</button>
+			</div>
+			<div id="step-3" class="form_step">
+				<h2>Step 3 - Add instructions</h2>
+				<input class="add_recipe_inputs" type="text" id="recipeInstructions" placeholder="step by step instructions">
+				<div class="difficulty_choice">
+					<label for="simple">Simple</label>
+					<input type="radio" name="difficulty" id="simple" value="simple" checked>
+					<label for="medium">Medium</label>
+					<input type="radio" name="difficulty" id="medium" value="medium">
+					<label for="complicated">Complicated</label>
+					<input type="radio" name="difficulty" id="complicated" value="complicated">
+				</div>
+				<ol id="list_of_instructions">
+				</ol>
+				<button id="add_instruction">Add instruction</button>
+				<button class="next_button">Next</button>
+			</div>
+			<div id="step-4" class="form_step">
+				<h2>Step 4 - Add image</h2>
+				<input class="add_recipe_inputs" type="text" id="recipeImage" placeholder="image of the final dish">
+				<button class="next_button">Next</button>
+			</div>
+		</div>
+
+		<div id="filtering_displayed_recipes" class="form_for_filtering_displayed_recipes" style="display: none;">
+			<h2>Search or Filter out recipes</h2>
+
+			<div class="search_form">
+				<input type="text" name="" id="search_recipes_input" placeholder="Type name or another keyword...">
+				<button id="search_recipes">Filter</button>
+			</div>
+				
+			<div class="filter_option_container" id="filter_options">
+				<div class="filter_difficulty">
+					<h4>Difficulty</h4>
+					<label for="simple_difficulty">Simple</label>
+					<input type="checkbox" name="Simple" id="simple_difficulty">
+					<label for="medium_difficulty">Medium</label>
+					<input type="checkbox" name="Medium" id="medium_difficulty">
+					<label for="complicated_difficulty">Complicated</label>
+					<input type="checkbox" name="Complicated" id="complicated_difficulty">
+				</div>
+
+				<div class="filter_flavor">
+					<h4>Flavor</h4>
+					<label for="sweet_flavor">Sweet</label>
+					<input type="checkbox" name="Sweet" id="sweet_flavor">
+					<label for="savory_flavor">Savory</label>
+					<input type="checkbox" name="Savory" id="savory_flavor">
+				</div>
+
+				<div class="filter_consistency">
+					<h4>Consistency</h4>
+					<label for="drink_consistency">Drink</label>
+					<input type="checkbox" name="Drink" id="drink_consistency">
+					<label for="food_consistency">Food</label>
+					<input type="checkbox" name="Food" id="food_consistency">
+				</div>
+			</div>
+			
+			<div class="specific_filters">
+				<h4>Ingredients</h4>
+				<div class="ingredients_1">
+					<label for="chicken">Chicken</label>
+					<input type="checkbox" name="chicken" id="chicken">
+					<label for="pork">Pork</label>
+					<input type="checkbox" name="pork" id="pork">
+					<label for="beef">Beef</label>
+					<input type="checkbox" name="beef" id="beef">
+					<label for="fish">Fish</label>
+					<input type="checkbox" name="fish" id="fish">
+					<label for="tomato">Tomato</label>
+					<input type="checkbox" name="tomato" id="tomato">
+					<label for="rice">Rice</label>
+					<input type="checkbox" name="rice" id="rice">
+					<label for="potato">Potato</label>
+					<input type="checkbox" name="potato" id="potato">
+					<label for="eggs">Eggs</label>
+					<input type="checkbox" name="eggs" id="eggs">
+				</div>
+			</div>
+		</div>
+
+		<div class="recipe_display" id="display">
+	
+		</div>
+			
+	</main>
+	
+
+	<script type="module" src="../js/recipes.js"></script>
+</body>
+</html>
